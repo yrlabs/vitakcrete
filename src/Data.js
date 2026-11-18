@@ -1,7 +1,7 @@
 const Data = {
-  WebsiteTitle: "Portfolio | Artists",
-  HeaderTitle: "Artist's Portfolio",
-  FooterText: "© 2024 Artist's Portfolio. All rights reserved.",
+  WebsiteTitle: "Portfolio | Youngjun Chang",
+  HeaderTitle: "Vitakcrete",
+  FooterText: "© 2026 Youngjun Chang. All rights reserved.",
   AboutEmail: "Your Email Address",
   AboutEmailSubject: "Subject of the Email",
   AboutHeading: "About Me",
