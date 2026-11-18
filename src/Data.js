@@ -1,5 +1,5 @@
 const Data = {
-  WebsiteTitle: "Portfolio | Youngjun Chang",
+  WebsiteTitle: "Youngjun Chang | Works",
   HeaderTitle: "Vitakcrete",
   FooterText: "© 2026 Youngjun Chang. All rights reserved.",
   AboutEmail: "Your Email Address",
