@@ -10,7 +10,7 @@ function Footer() {
         <p style={{ marginTop: "5px", fontSize: "12px" }}>
           Designed and developed by{" "}
           <a
-            href="https://vitakcrete.com"
+            href="https://www.instagram.com/vitakcrete/"
             style={{ textDecoration: "none", color: "#F4A261" }}
           >
             Youngjun Chang
