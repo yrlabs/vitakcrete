@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename="/vitakcrete">
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />} />
