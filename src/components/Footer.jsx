@@ -10,10 +10,10 @@ function Footer() {
         <p style={{ marginTop: "5px", fontSize: "12px" }}>
           Designed and developed by{" "}
           <a
-            href="https://www.instagram.com/vitakcrete/"
+            href="https://vitakcrete.com"
             style={{ textDecoration: "none", color: "#F4A261" }}
           >
-            youngjun chang
+            Youngjun Chang
           </a>
         </p>
       </div>
