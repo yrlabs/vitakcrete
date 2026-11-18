@@ -1,12 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   CENTRAL FONT CONTROL PANEL
+   Change these two lines anytime to update
+   fonts across the entire website!
+   ========================================= */
+:root {
+  --font-display: "Sora", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
-  font-family: "Aleo", serif;
+  font-family: var(--font-body);
   font-optical-sizing: auto;
   background-color: #222831;
+  color: #ffffff;
+}
+
+/* Automatically applies your Display Font to all titles & headers */
+h1, h2, h3, h4, h5, h6, header a {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
