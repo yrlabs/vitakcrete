@@ -1,4 +1,4 @@
-# Portfolio Template For Artists
+# Vitakcrete Portfolio
 
 A modern React portfolio template for artists, illustrators, photographers, and other visual creators. The project uses Vite for a fast development server, quick production builds, and a lightweight modern toolchain.
 
