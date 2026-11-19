@@ -2,15 +2,15 @@ import React from "react";
 import PortfolioCSS from "../css/Portfolio.module.css";
 import { motion } from "framer-motion";
 
-const imageModules = import.meta.glob(
-  "../assets/images/*.{webp,png,jpg,jpeg,gif}",
+const mediaModules = import.meta.glob(
+  "../assets/images/*.{webp,png,jpg,jpeg,gif,mp4}",
   {
     eager: true,
     import: "default",
   },
 );
 
-const images = Object.values(imageModules);
+const mediaItems = Object.values(mediaModules);
 
 const imageVariants = {
   hidden: {
@@ -32,14 +32,16 @@ const imageVariants = {
 function Portfolio() {
   return (
     <div className={PortfolioCSS.gridContainer}>
-      {images.map((src, index) => (
-        <ImageWrapper key={index} src={src} index={index} />
+      {mediaItems.map((src, index) => (
+        <MediaWrapper key={index} src={src} index={index} />
       ))}
     </div>
   );
 }
 
-function ImageWrapper({ src, index }) {
+function MediaWrapper({ src, index }) {
+  const isVideo = typeof src === "string" && src.toLowerCase().endsWith(".mp4");
+
   return (
     <motion.div
       variants={imageVariants}
@@ -49,13 +51,24 @@ function ImageWrapper({ src, index }) {
       style={{ willChange: "opacity, transform" }}
       className={PortfolioCSS.imageWrapper}
     >
-      <img
-        src={src}
-        alt={`Portfolio ${index + 1}`}
-        className={PortfolioCSS.image}
-        draggable="false"
-        decoding="async"
-      />
+      {isVideo ? (
+        <video
+          src={src}
+          className={PortfolioCSS.image}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      ) : (
+        <img
+          src={src}
+          alt={`Portfolio ${index + 1}`}
+          className={PortfolioCSS.image}
+          draggable="false"
+          decoding="async"
+        />
+      )}
     </motion.div>
   );
 }
