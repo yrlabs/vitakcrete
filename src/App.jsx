@@ -6,6 +6,8 @@ import Loader from "./components/Loader";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
+const Log = lazy(() => import("./pages/Log"));
+const LogDetail = lazy(() => import("./pages/LogDetail"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
@@ -15,7 +17,6 @@ const App = () => {
     };
 
     document.addEventListener("contextmenu", handleContextMenu);
-    // Cleanup the event listener on component unmount
     return () => {
       document.removeEventListener("contextmenu", handleContextMenu);
     };
@@ -28,6 +29,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/log" element={<Log />} />
+            <Route path="/log/:slug" element={<LogDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
