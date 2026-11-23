@@ -27,6 +27,11 @@ function Header() {
             </Link>
           </li>
           <li>
+            <Link to="/log" onClick={handleLinkClick}>
+              Log
+            </Link>
+          </li>
+          <li>
             <Link to="/about" onClick={handleLinkClick}>
               About
             </Link>
