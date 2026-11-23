@@ -14,7 +14,7 @@ function Header() {
   return (
     <div className={HeaderCSS.container}>
       <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-        <h1 style={{ fontWeight: "300", fontSize: "1.9rem", letterSpacing: "-0.02em" }}>
+        <h1 style={{ fontWeight: "400", fontSize: "1.9rem", letterSpacing: "-0.02em" }}>
           {data.HeaderTitle}
         </h1>
       </Link>
