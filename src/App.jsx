@@ -8,6 +8,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Log = lazy(() => import("./pages/Log"));
 const LogDetail = lazy(() => import("./pages/LogDetail"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
