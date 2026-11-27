@@ -235,7 +235,6 @@
 }
 
 /* Editorial label + copy row (Brief / Method) */
-/* Editorial label + copy row (Brief / Method) */
 .textBlock {
   display: grid;
   grid-template-columns: minmax(120px, 210px) minmax(0, 880px);
