@@ -72,8 +72,17 @@
 
 @media (max-width: 1024px) {
   .gridContainer {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 12px 24px;
+    gap: 12px;
+  }
+
+  .overlay {
+    padding: 12px;
+  }
+
+  .hoverTitle {
+    font-size: 1.35rem;
+    line-height: 1.05;
   }
 }
