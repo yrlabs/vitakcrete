@@ -36,6 +36,45 @@ const projectsData = [
       "Trinity Buoy Wharf transformed into an immersive Stranger Things theme park, hosting 2500 superfans who celebrated the final chapter of the iconic Netflix show. Holographic projections and physical sets brought scenes and characters to life.",
     ],
     media: [],
+    blocks: [
+      {
+        type: "text",
+        label: "Brief",
+        body: "Trinity Buoy Wharf transformed into an immersive Stranger Things theme park, hosting 2,500 superfans who celebrated the final chapter of the iconic Netflix show. Holographic projections and physical sets brought scenes and characters to life.",
+      },
+      {
+        type: "media",
+        items: [
+          { src: "strangerthings-vecna2.mp4", kind: "video" },
+          { src: "strangerthings-audience1.mp4", kind: "video" },
+        ],
+      },
+      {
+        type: "media",
+        items: [
+          {
+            src: "strangerthings-diagram.jpg",
+            kind: "image",
+            alt: "Media system architecture diagram for Stranger Things activation",
+          },
+        ],
+      },
+      {
+        type: "text",
+        label: "Method",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Designed a dual-projector Hologauze projection rig powered by Panasonic RQ35K units, routed through a Datapath FX4 and redundant 50m HDMI and CAT6 signal paths from a dedicated 12U back-of-house media server rack synchronized with lighting and audio desks.",
+      },
+      {
+        type: "media",
+        items: [
+          {
+            src: "strangerthings-wide.jpg",
+            kind: "image",
+            alt: "Wide view of the Stranger Things holographic projection and crowd",
+          },
+        ],
+      },
+    ],
   },
   /* --- READY SLOT FOR PROJECT 03 (Uncomment when image is uploaded) ---
   {
