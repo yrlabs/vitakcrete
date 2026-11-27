@@ -50,16 +50,6 @@ const projectsData = [
         ],
       },
       {
-        type: "media",
-        items: [
-          {
-            src: "strangerthings-diagram.jpg",
-            kind: "image",
-            alt: "Media system architecture diagram",
-          },
-        ],
-      },
-      {
         type: "text",
         label: "Method",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Designed a dual-projector Hologauze projection rig powered by Panasonic RQ35K units, routed through a Datapath FX4 and redundant 50m HDMI and CAT6 signal paths from a dedicated 12U back-of-house media server rack synchronized with lighting and audio desks.",
@@ -68,9 +58,14 @@ const projectsData = [
         type: "media",
         items: [
           {
+            src: "strangerthings-diagram.jpg",
+            kind: "image",
+            alt: "Media system architecture diagram for Stranger Things activation",
+          },
+          {
             src: "strangerthings-wide.jpg",
             kind: "image",
-            alt: "Holographic projection in nightsky and crowd",
+            alt: "Wide view of the Stranger Things holographic projection and crowd",
           },
         ],
       },
