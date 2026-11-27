@@ -16,7 +16,7 @@ const projectsData = [
     hoverTitle: "GTA VI",
     fullTitle: "Grand Theft Auto VI: The Festival",
     year: "2026",
-    category: "Live Visuals / Media System",
+    category: "Live visuals / Media systems",
     cover: getAsset("01-gta-cardib.jpg"),
     description: [
       "Celebrating the lauch of the long-awaited GTA VI, over 5000 fans gathered at Mana Wynwood to enjoy a festival packed full of immserive live visuals, lighting and effects, with artists such as Cardi B, Travis Scott and Tainy bringing the sounds of Vice City to life. ",
@@ -26,11 +26,11 @@ const projectsData = [
   },
   {
     id: "02",
-    slug: "strangerthings",
+    slug: "stranger-things",
     hoverTitle: "STRANGER THINGS",
     fullTitle: "Stranger Things: One Last Adventure Fan Activation",
     year: "2025",
-    category: "Immersive Experience / Brand Activation",
+    category: "Immersive experience / Brand activation",
     cover: getAsset("02-strangerthings-onelastadventure.jpg"),
     description: [
       "Trinity Buoy Wharf transformed into an immersive Stranger Things theme park, hosting 2500 superfans who celebrated the final chapter of the iconic Netflix show. Holographic projections and physical sets brought scenes and characters to life.",
@@ -40,7 +40,7 @@ const projectsData = [
   /* --- READY SLOT FOR PROJECT 03 (Uncomment when image is uploaded) ---
   {
     id: "03",
-    slug: "project-03",
+    slug: "meta",
     hoverTitle: "Project 03 Title",
     fullTitle: "Project 03 Elaborated Title",
     year: "2025",
@@ -56,7 +56,7 @@ const projectsData = [
     hoverTitle: "SEOUL LIGHT FESTIVAL",
     fullTitle: "2024 Seoul Light Festival: Hyperdrive",
     year: "2024",
-    category: "Immersive Experience / Public Art",
+    category: "Immersive experience / Public art",
     cover: getAsset("04-hyperdrive.png"),
     description: [
       "Hyperdrive took over the main stage of 2024 Seoul Light Festival, welcoming the public to experince 360° binaural sound, sensory effects, and theatrical design.",
@@ -69,7 +69,7 @@ const projectsData = [
     hoverTitle: "HUGO BOSS X DAVID BECKHAM",
     fullTitle: "",
     year: "2025",
-    category: "Live Visuals / Brand Activation",
+    category: "Live visuals / Brand activation",
     cover: getAsset("05-hugoboss.jpg"),
     description: [
       "Project description coming soon.",
@@ -79,8 +79,8 @@ const projectsData = [
   /* --- READY SLOTS FOR PROJECTS 06 & 07 (Uncomment when uploaded) ---
   {
     id: "06",
-    slug: "project-06",
-    hoverTitle: "Project 06 Title",
+    slug: "machester-airport",
+    hoverTitle: "MANCHESTER AIRPORT VIP LOUNGE",
     fullTitle: "Project 06 Elaborated Title",
     year: "2025",
     category: "Category",
@@ -90,8 +90,8 @@ const projectsData = [
   },
   {
     id: "07",
-    slug: "project-07",
-    hoverTitle: "Project 07 Title",
+    slug: "spotify-hq",
+    hoverTitle: "AMSTERDAM SPOTIFY HQ",
     fullTitle: "Project 07 Elaborated Title",
     year: "2025",
     category: "Category",
@@ -103,10 +103,10 @@ const projectsData = [
   {
     id: "08",
     slug: "nissan",
-    hoverTitle: "Nissan E-POWER",
+    hoverTitle: "NISSAN E-POWER",
     fullTitle: "Nissan E-POWER MILESTONE",
     year: "2024",
-    category: "Immersive Experience / Brand Activation",
+    category: "Immersive experience / Brand activation",
     cover: getAsset("08-nissan.jpg"),
     description: [
       "To celebrate Nissan's 100,000 e-POWER vehicle sales milestone in Europe, stunning visuals reflecting the creativity and engineering genius of Nissan's Quashquai and X-Trail models were projected onto the vehicles.",
@@ -116,10 +116,10 @@ const projectsData = [
   {
     id: "09",
     slug: "james",
-    hoverTitle: "James World Tour",
+    hoverTitle: "JAMES WORLD TOUR",
     fullTitle: "James World Tour",
     year: "2025, 2024",
-    category: "Live Visuals / Media System",
+    category: "Live visuals / Media systems",
     cover: getAsset("09-james.jpg"),
     description: [
       "Global fans enjoyed James's music alongside cutting-edge technologies for live visuals and effects, designed to fit venues of all scales and systems across the UK.",
@@ -129,10 +129,10 @@ const projectsData = [
   {
     id: "10",
     slug: "the-ks-leeds",
-    hoverTitle: "The K's — Leeds",
-    fullTitle: "The K's Live in Leeds",
-    year: "2025",
-    category: "Live Concert Visuals",
+    hoverTitle: "The K's TOUR",
+    fullTitle: "The K's National Tour",
+    year: "2026",
+    category: "Live visuals / Media systems",
     cover: getAsset("10-theks-leeds.jpg"),
     description: [
       "Project description coming soon.",
@@ -145,7 +145,7 @@ const projectsData = [
     hoverTitle: "CULT VR",
     fullTitle: "Resonance at CultVR",
     year: "2025",
-    category: "Creative Technology / Immersive Experience",
+    category: "Immersive experience / Public art",
     cover: getAsset("11-eeg.jpg"),
     description: [
       "Resonance is a live experiment where brain activity shapes the environment in real time. Five participants sit on stage, their brainwaves projected as shifting states of focus, calm, or distraction. The audience witnesses these invisible patterns merge, fragment, and reform, creating a collective portrait of thought and feeling.",
@@ -155,10 +155,10 @@ const projectsData = [
   {
     id: "12",
     slug: "espolon",
-    hoverTitle: "Espolòn Tequila",
+    hoverTitle: "ESPOlÒN TEQUILA",
     fullTitle: "Espolòn Tequila Halloween Activation",
     year: "2026",
-    category: "Brand Activation / Digital Experience",
+    category: "Brand activation / Digital experience",
     cover: getAsset("12-espolon.png"),
     description: [
       "Project description coming soon.",
@@ -168,23 +168,23 @@ const projectsData = [
   {
     id: "13",
     slug: "sxsw",
-    hoverTitle: "SXSW",
-    fullTitle: "SXSW Showcase",
+    hoverTitle: "SXSW X NOTCHVFX",
+    fullTitle: "Immersive art installation with Notch VFX for SXSW",
     year: "2025",
-    category: "Exhibition / Installation",
+    category: "Public art / Immersive experience",
     cover: getAsset("13-sxsw.png"),
     description: [
-      "Project description coming soon.",
+      "Responsive digital art that responded to breath, motion, light, and sound. Each piece challenges the boundary between space and sensation",
     ],
     media: [],
   },
   {
     id: "14",
     slug: "aba-miami",
-    hoverTitle: "ABA Miami",
-    fullTitle: "ABA Miami",
-    year: "2025",
-    category: "Spatial Visuals",
+    hoverTitle: "ART BASEL MIAMI",
+    fullTitle: "ART BASEL AWARDS",
+    year: "2026",
+    category: "Live visuals",
     cover: getAsset("14-aba-miami.jpg"),
     description: [
       "Project description coming soon.",
@@ -194,10 +194,10 @@ const projectsData = [
   {
     id: "15",
     slug: "harrods",
-    hoverTitle: "Harrods",
-    fullTitle: "Harrods",
-    year: "2025",
-    category: "Retail Installation",
+    hoverTitle: "HARRODS CHRISTMAS WINDOWS",
+    fullTitle: "Harrods Christmas Displays 2024",
+    year: "2023",
+    category: "Public art / Brand experience",
     cover: getAsset("15-harrods.jpg"),
     description: [
       "Project description coming soon.",
@@ -207,10 +207,10 @@ const projectsData = [
   {
     id: "16",
     slug: "lapland",
-    hoverTitle: "Lapland",
-    fullTitle: "Lapland",
-    year: "2025",
-    category: "Immersive Environment",
+    hoverTitle: "LAPLAND UK",
+    fullTitle: "Lapland UK: Magical Winter",
+    year: "2024, 2025",
+    category: "Immersive Environment / Theatre design",
     cover: getAsset("16-lapland.jpg"),
     description: [
       "Project description coming soon.",
@@ -220,10 +220,10 @@ const projectsData = [
   {
     id: "17",
     slug: "boiler-room-club-shy",
-    hoverTitle: "Boiler Room: Club Shy",
-    fullTitle: "Boiler Room — Club Shy",
-    year: "2025",
-    category: "Live Visuals",
+    hoverTitle: "COACH X BOILER ROOM",
+    fullTitle: "COACH X BOILER ROM X CLUBSHY",
+    year: "2026",
+    category: "Live visuals / Media systems",
     cover: getAsset("17-boiler-clubshy.jpg"),
     description: [
       "Project description coming soon.",
@@ -233,10 +233,10 @@ const projectsData = [
   {
     id: "18",
     slug: "jo-malone",
-    hoverTitle: "Jo Malone London",
-    fullTitle: "Jo Malone London",
+    hoverTitle: "JO MALONE LONDON",
+    fullTitle: "Jo Malone Christmas Windows 2025",
     year: "2025",
-    category: "Brand Installation",
+    category: "Brand experience",
     cover: getAsset("18-jomalone.jpg"),
     description: [
       "Project description coming soon.",
@@ -246,10 +246,10 @@ const projectsData = [
   {
     id: "19",
     slug: "boiler-room-burgess",
-    hoverTitle: "Boiler Room: Burgess",
-    fullTitle: "Boiler Room — Burgess",
-    year: "2025",
-    category: "Live Visuals",
+    hoverTitle: "BOILER ROOM X DJEZ X JYOTY",
+    fullTitle: "Boiler Room at Burgess Park: DJEZ< JYOTY",
+    year: "2023",
+    category: "Live visuals / Media System",
     cover: getAsset("19-boiler-burgess.png"),
     description: [
       "Project description coming soon.",
@@ -259,10 +259,10 @@ const projectsData = [
   {
     id: "20",
     slug: "ice-spice",
-    hoverTitle: "Ice Spice",
-    fullTitle: "Ice Spice",
-    year: "2025",
-    category: "Stage Visuals",
+    hoverTitle: "SPOTIFY ICE SPICE LAUNCH",
+    fullTitle: "Ice Spice Lauch Party with Spotify",
+    year: "2023",
+    category: "Brand activation / Immersive experience",
     cover: getAsset("20-icespice.jpg"),
     description: [
       "Project description coming soon.",
@@ -272,10 +272,10 @@ const projectsData = [
   {
     id: "21",
     slug: "printworks",
-    hoverTitle: "Printworks",
-    fullTitle: "Printworks London",
-    year: "2025",
-    category: "Architectural Projection",
+    hoverTitle: "PRINTWORKS X TRICK",
+    fullTitle: "Trick label presenting at Printworks",
+    year: "2023",
+    category: "Live visuals",
     cover: getAsset("21-printworks.jpg"),
     description: [
       "Project description coming soon.",
