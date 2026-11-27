@@ -55,7 +55,7 @@ const projectsData = [
           {
             src: "strangerthings-diagram.jpg",
             kind: "image",
-            alt: "Media system architecture diagram for Stranger Things activation",
+            alt: "Media system architecture diagram",
           },
         ],
       },
@@ -70,7 +70,7 @@ const projectsData = [
           {
             src: "strangerthings-wide.jpg",
             kind: "image",
-            alt: "Wide view of the Stranger Things holographic projection and crowd",
+            alt: "Holographic projection in nightsky and crowd",
           },
         ],
       },
