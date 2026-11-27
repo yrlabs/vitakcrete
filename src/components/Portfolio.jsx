@@ -1,16 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PortfolioCSS from "../css/Portfolio.module.css";
 import { motion } from "framer-motion";
-
-const mediaModules = import.meta.glob(
-  "../assets/images/*.{webp,png,jpg,jpeg,gif,mp4}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
-
-const mediaItems = Object.values(mediaModules);
+import projectsData from "../data/projectsData";
 
 const imageVariants = {
   hidden: {
@@ -23,7 +15,7 @@ const imageVariants = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 4,
+      duration: 1.4,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -32,15 +24,17 @@ const imageVariants = {
 function Portfolio() {
   return (
     <div className={PortfolioCSS.gridContainer}>
-      {mediaItems.map((src, index) => (
-        <MediaWrapper key={index} src={src} index={index} />
+      {projectsData.map((project) => (
+        <MediaWrapper key={project.id} project={project} />
       ))}
     </div>
   );
 }
 
-function MediaWrapper({ src, index }) {
-  const isVideo = typeof src === "string" && src.toLowerCase().endsWith(".mp4");
+function MediaWrapper({ project }) {
+  const { slug, cover, hoverTitle } = project;
+  const isVideo =
+    typeof cover === "string" && cover.toLowerCase().endsWith(".mp4");
 
   return (
     <motion.div
@@ -51,24 +45,29 @@ function MediaWrapper({ src, index }) {
       style={{ willChange: "opacity, transform" }}
       className={PortfolioCSS.imageWrapper}
     >
-      {isVideo ? (
-        <video
-          src={src}
-          className={PortfolioCSS.image}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-      ) : (
-        <img
-          src={src}
-          alt={`Portfolio ${index + 1}`}
-          className={PortfolioCSS.image}
-          draggable="false"
-          decoding="async"
-        />
-      )}
+      <Link to={`/work/${slug}`} className={PortfolioCSS.cardLink}>
+        {isVideo ? (
+          <video
+            src={cover}
+            className={PortfolioCSS.image}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        ) : (
+          <img
+            src={cover}
+            alt={hoverTitle}
+            className={PortfolioCSS.image}
+            draggable="false"
+            decoding="async"
+          />
+        )}
+        <div className={PortfolioCSS.overlay}>
+          <h2 className={PortfolioCSS.hoverTitle}>{hoverTitle}</h2>
+        </div>
+      </Link>
     </motion.div>
   );
 }
