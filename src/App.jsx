@@ -31,6 +31,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/log" element={<Log />} />
             <Route path="/log/:slug" element={<LogDetail />} />
+            <Route path="/work/:slug" element={<ProjectDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
