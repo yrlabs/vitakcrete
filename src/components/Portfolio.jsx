@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import PortfolioCSS from "../css/Portfolio.module.css";
 import { motion } from "framer-motion";
 import projectsData from "../data/projectsData";
@@ -21,13 +21,52 @@ const imageVariants = {
   },
 };
 
+const parseCategories = (categoryString) => {
+  if (!categoryString) return [];
+  return categoryString
+    .split("/")
+    .map((c) => c.trim())
+    .filter(Boolean);
+};
+
 function Portfolio() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeCategory = searchParams.get("category");
+
+  const filteredProjects = activeCategory
+    ? projectsData.filter((project) =>
+        parseCategories(project.category).some(
+          (cat) => cat.toLowerCase() === activeCategory.toLowerCase()
+        )
+      )
+    : projectsData;
+
   return (
-    <div className={PortfolioCSS.gridContainer}>
-      {projectsData.map((project) => (
-        <MediaWrapper key={project.id} project={project} />
-      ))}
-    </div>
+    <>
+      {activeCategory && (
+        <div className={PortfolioCSS.filterBar}>
+          <span className={PortfolioCSS.filterLabel}>
+            {activeCategory}{" "}
+            <span className={PortfolioCSS.filterCount}>
+              ({filteredProjects.length})
+            </span>
+          </span>
+          <button
+            type="button"
+            className={PortfolioCSS.clearFilter}
+            onClick={() => setSearchParams({})}
+          >
+            Show all works ✕
+          </button>
+        </div>
+      )}
+
+      <div className={PortfolioCSS.gridContainer}>
+        {filteredProjects.map((project) => (
+          <MediaWrapper key={project.id} project={project} />
+        ))}
+      </div>
+    </>
   );
 }
 
