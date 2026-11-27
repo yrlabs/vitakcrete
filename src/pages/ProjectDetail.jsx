@@ -9,16 +9,16 @@ import styles from "../css/ProjectDetail.module.css";
 function ProjectDetail() {
   const { slug } = useParams();
   const project = projectsData.find((item) => item.slug === slug);
-  const heroRef = useRef(null);
+  const sheetRef = useRef(null);
 
-  // Tracks scroll progress over the hero so it fades out smoothly as the white sheet rises
+  // Tracks the white sheet rising from the bottom of the screen to the top
   const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
+    target: sheetRef,
+    offset: ["start end", "start start"],
   });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0.08]);
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
 
   if (!project) {
     return (
@@ -41,12 +41,15 @@ function ProjectDetail() {
 
   return (
     <div className={styles.pageWrapper}>
-      <Header />
+      {/* Floating transparent header overlaid on top of the full-screen image */}
+      <div className={styles.headerOverlay}>
+        <Header />
+      </div>
 
-      {/* 1. Full-bleed sticky hero (fades smoothly on scroll) */}
-      <section ref={heroRef} className={styles.heroSection}>
+      {/* 1. Pinned full-screen hero (100vw x 100vh) */}
+      <section className={styles.heroSection}>
         <motion.div
-          className={styles.heroSticky}
+          className={styles.heroInner}
           style={{ opacity: heroOpacity, scale: heroScale }}
         >
           {isCoverVideo ? (
@@ -66,12 +69,13 @@ function ProjectDetail() {
               draggable="false"
             />
           )}
-          <div className={styles.scrollCue}>Scroll to explore ↓</div>
         </motion.div>
+        <div className={styles.topGradient} />
+        <div className={styles.scrollCue}>Scroll to explore ↓</div>
       </section>
 
-      {/* 2. White editorial sheet that rises over the hero image */}
-      <main className={styles.whiteSheet}>
+      {/* 2. White editorial sheet that slides up over the pinned hero */}
+      <main ref={sheetRef} className={styles.whiteSheet}>
         <div className={styles.sheetInner}>
           <Link to="/" className={styles.backLink}>
             ← Back to Works
