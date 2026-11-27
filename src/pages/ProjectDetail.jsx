@@ -200,17 +200,15 @@ function ProjectDetail() {
             ← Back to Works
           </Link>
 
+          {/* Year number on the left, Stacked Categories aligned on the right across every subpage */}
+          <div className={styles.metaBar}>
+            <p className={styles.metaYear}>{project.year}</p>
+            {renderCategoryStack()}
+          </div>
+
           {hasBlocks ? (
             <div className={styles.modularLayout}>
-              {/* Project Header: Year on left, Stacked Categories on right */}
               <header className={styles.projectHeader}>
-                <div className={styles.metaBar}>
-                  <p className={styles.metaYear}>
-                    <span className={styles.metaYearLabel}>YEAR</span>{" "}
-                    {project.year}
-                  </p>
-                  {renderCategoryStack()}
-                </div>
                 <h1 className={styles.title}>{project.fullTitle}</h1>
               </header>
 
@@ -290,13 +288,6 @@ function ProjectDetail() {
               }
             >
               <div className={styles.textColumn}>
-                <div className={styles.metaBar}>
-                  <p className={styles.metaYear}>
-                    <span className={styles.metaYearLabel}>YEAR</span>{" "}
-                    {project.year}
-                  </p>
-                  {renderCategoryStack()}
-                </div>
                 <h1 className={styles.title}>{project.fullTitle}</h1>
                 <div className={styles.description}>
                   {project.description.map((paragraph, index) => (
