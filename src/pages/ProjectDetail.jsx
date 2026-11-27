@@ -6,20 +6,40 @@ import Footer from "../components/Footer";
 import projectsData, { getAsset } from "../data/projectsData";
 import styles from "../css/ProjectDetail.module.css";
 
+const PASTEL_PALETTE = [
+  "#F5EBB8", // pale yellow
+  "#F4C7C7", // pale red
+  "#C9DFF2", // pale blue
+  "#CDE8D5", // pale sage
+  "#DFD3F2", // pale lavender
+  "#F7D8BA", // pale peach
+  "#C7E8E6", // pale mint
+  "#ECCEE3", // pale rose
+];
+
+const CATEGORY_COLOR_OVERRIDES = {
+  "immersive experience": "#F5EBB8",
+  "brand activation": "#F4C7C7",
+};
+
+const getCategoryColor = (categoryName) => {
+  const key = categoryName.trim().toLowerCase();
+  if (CATEGORY_COLOR_OVERRIDES[key]) {
+    return CATEGORY_COLOR_OVERRIDES[key];
+  }
+  let hash = 0;
+  for (let i = 0; i < key.length; i++) {
+    hash = key.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return PASTEL_PALETTE[Math.abs(hash) % PASTEL_PALETTE.length];
+};
+
 const parseCategories = (categoryString) => {
   if (!categoryString) return [];
   return categoryString
     .split("/")
     .map((c) => c.trim())
     .filter(Boolean);
-};
-
-const getCategoryCount = (targetCat) => {
-  return projectsData.filter((p) =>
-    parseCategories(p.category).some(
-      (cat) => cat.toLowerCase() === targetCat.toLowerCase()
-    )
-  ).length;
 };
 
 function ProjectDetail() {
@@ -148,11 +168,9 @@ function ProjectDetail() {
             key={cat}
             to={`/?category=${encodeURIComponent(cat)}`}
             className={styles.categoryTag}
+            style={{ backgroundColor: getCategoryColor(cat) }}
           >
-            <span>{cat}</span>
-            <span className={styles.categoryCount}>
-              {getCategoryCount(cat)}
-            </span>
+            {cat}
           </Link>
         ))}
       </div>
@@ -205,7 +223,7 @@ function ProjectDetail() {
 
           {hasBlocks ? (
             <div className={styles.modularLayout}>
-              {/* Project Header: Year + Stacked Categories, then Full Title */}
+              {/* Project Header: Year on left, Stacked Pastel Categories on right */}
               <header className={styles.projectHeader}>
                 <div className={styles.metaBar}>
                   <p className={styles.metaYear}>
@@ -220,7 +238,6 @@ function ProjectDetail() {
               {/* Modular Content Blocks */}
               <div className={styles.blocksStack}>
                 {project.blocks.map((block, index) => {
-                  // 1. Editorial Text Block (e.g. Brief, Method)
                   if (block.type === "text") {
                     const paragraphs = Array.isArray(block.body)
                       ? block.body
@@ -239,7 +256,6 @@ function ProjectDetail() {
                     );
                   }
 
-                  // 2. Split Block (Text next to a single vertical video/image)
                   if (block.type === "split") {
                     const paragraphs = Array.isArray(block.body)
                       ? block.body
@@ -263,7 +279,6 @@ function ProjectDetail() {
                     );
                   }
 
-                  // 3. Media Block (1 full-width padded item OR 2+ side-by-side)
                   if (block.type === "media" && Array.isArray(block.items)) {
                     const count = block.items.length;
                     const gridClass =
