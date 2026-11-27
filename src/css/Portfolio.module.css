@@ -32,10 +32,10 @@
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.overlay {
+overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 18, 22, 0.56);
+  background: rgba(12, 15, 19, 0.64);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,16 +46,16 @@
 }
 
 .hoverTitle {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
-  line-height: 1.25;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  line-height: 1.02;
   color: #ffffff;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.04em;
   transform: translateY(6px);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .cardLink:hover .overlay,
 .cardLink:focus-visible .overlay {
   opacity: 1;
