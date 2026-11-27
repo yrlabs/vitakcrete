@@ -138,7 +138,7 @@ const projectsData = [
     id: "08",
     slug: "nissan",
     hoverTitle: "NISSAN E-POWER",
-    fullTitle: "Nissan E-POWER MILESTONE",
+    fullTitle: "Nissan E-Power Milestone",
     year: "2024",
     category: "Immersive experience / Brand activation",
     cover: getAsset("08-nissan.webp"),
@@ -155,10 +155,37 @@ const projectsData = [
     year: "2025, 2024",
     category: "Live visuals / Media systems",
     cover: getAsset("09-james.webp"),
-    description: [
-      "Global fans enjoyed James's music alongside cutting-edge technologies for live visuals and effects, designed to fit venues of all scales and systems across the UK.",
+    blocks: [
+      {
+        type: "text",
+        label: "Brief",
+        body: "Using cutting-edge technologies reflecting James's every-evolving music, bringing AI-powered generative visuals, lighting and laser works to global audiences. Optimised for venues of all scale across the world.",
+      },
+      {
+        type: "media",
+        items: [
+          {
+            src: "james-mobilegod.mp4",
+            kind: "video",
+          },
+        ],
+      },
+      {
+        type: "text",
+        label: "Method",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Engineered scalable live visual playback and real-time cueing across arena and festival stages, adapting aspect ratios, LED wall/projection feeds, and show control workflows between tour stops.",
+      },
+      {
+        type: "media",
+        items: [
+          {
+            src: "james-audience.jpg",
+            kind: "image",
+            alt: "Audience view during the James World Tour live visuals show",
+          },
+        ],
+      },
     ],
-    media: [],
   },
   {
     id: "10",
