@@ -265,6 +265,8 @@
 
 .blockBody p {
   margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.52;
 }
 
 /* Split block: Text comfortably next to 1 vertical video/image */
