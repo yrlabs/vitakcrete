@@ -5,7 +5,7 @@ const logEntries = [
     context: "Presentation · TouchDesigner London Summer 2025",
     title: "Projection Simulator with TouchDesigner",
     summary:
-      "An invited session demonstarting a previsualization, prototyping, and live show planning tool I developed with TouchDesigner.",
+      "An invited session demonstrating a previsualization, prototyping, and live show planning tool I developed with TouchDesigner.",
     paragraphs: [
       "During the first ever official TouchDesigner event in London, I shared a breakdown of the projection simulator tool I developed as part of the research and design project commissioned by the Ministry of Culture, Sports and Tourism of South Korea.",
     ],
