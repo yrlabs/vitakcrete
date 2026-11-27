@@ -1,60 +1,89 @@
 .pageWrapper {
-  background-color: #222831;
+  position: relative;
+  background-color: #111418;
   min-height: 100vh;
 }
 
-/* Full-bleed sticky hero */
-.heroSection {
-  position: relative;
+/* Floats Vitakcrete + menu directly on top of the full-screen image */
+.headerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 88vh;
-  z-index: 1;
+  z-index: 10;
 }
 
-.heroSticky {
+.headerOverlay > * {
+  background: transparent !important;
+}
+
+/* Pinned full-bleed hero */
+.heroSection {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 88vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  z-index: 1;
   overflow: hidden;
-  padding: 0 clamp(16px, 4vw, 48px) 32px;
+  background-color: #111418;
+}
+
+.heroInner {
+  width: 100%;
+  height: 100%;
   will-change: opacity, transform;
 }
 
-/* Shows the full uncropped image stretched cleanly across the viewport */
+/* Fills the entire screen edge-to-edge */
 .heroMedia {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
   user-select: none;
 }
 
+/* Subtle top shadow so the white Vitakcrete header stays readable over bright images */
+.topGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
 .scrollCue {
   position: absolute;
-  bottom: 18px;
+  bottom: 24px;
   right: clamp(20px, 4vw, 48px);
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.04em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   pointer-events: none;
+  z-index: 2;
 }
 
-/* Rising white editorial sheet */
+/* White editorial sheet that slides up over the pinned hero */
 .whiteSheet {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   background-color: #ffffff;
   color: #222831;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.28);
-  padding: clamp(40px, 6vw, 84px) clamp(20px, 5vw, 64px) clamp(64px, 8vw, 110px);
-  min-height: 75vh;
+  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.35);
+  padding: clamp(44px, 6vw, 88px) clamp(20px, 5vw, 64px) clamp(64px, 8vw, 110px);
+  min-height: 85vh;
 }
 
 .sheetInner {
@@ -175,11 +204,6 @@
 }
 
 @media (max-width: 900px) {
-  .heroSection,
-  .heroSticky {
-    height: 62vh;
-  }
-
   .splitLayout {
     grid-template-columns: 1fr;
   }
