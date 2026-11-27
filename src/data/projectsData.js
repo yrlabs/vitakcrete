@@ -19,7 +19,7 @@ const projectsData = [
     category: "Live visuals / Media systems",
     cover: getAsset("01-gta-cardib.webp"),
     description: [
-      "Celebrating the launch of the long-awaited GTA VI, over 5000 fans gathered at Mana Wynwood to enjoy a festival packed full of immserive live visuals, lighting and effects, with artists such as Cardi B, Travis Scott and Tainy bringing the sounds of Vice City to life. ",
+      "Celebrating the launch of the long-awaited GTA VI, over 5000 fans gathered at Mana Wynwood to enjoy a festival packed full of immersive live visuals, lighting and effects, with artists such as Cardi B, Travis Scott and Tainy bringing the sounds of Vice City to life. ",
     ],
     // Add extra subpage-only filenames (e.g. "01-detail.jpg", "01-video.mp4") or Vimeo/YouTube embed URLs below:
     media: [],
@@ -93,7 +93,7 @@ const projectsData = [
     category: "Immersive experience / Public art",
     cover: getAsset("04-hyperdrive.webp"),
     description: [
-      "Hyperdrive took over the main stage of 2024 Seoul Light Festival, welcoming the public to experince 360° binaural sound, sensory effects, and theatrical design.",
+      "Hyperdrive took over the main stage of 2024 Seoul Light Festival, welcoming the public to experience 360° binaural sound, sensory effects, and theatrical design.",
     ],
     media: [],
   },
@@ -143,7 +143,7 @@ const projectsData = [
     category: "Immersive experience / Brand activation",
     cover: getAsset("08-nissan.webp"),
     description: [
-      "To celebrate Nissan's 100,000 e-POWER vehicle sales milestone in Europe, stunning visuals reflecting the creativity and engineering genius of Nissan's Qashquai and X-Trail models were projected onto the vehicles.",
+      "To celebrate Nissan's 100,000 e-POWER vehicle sales milestone in Europe, stunning visuals reflecting the creativity and engineering genius of Nissan's Qashqai and X-Trail models were projected onto the vehicles.",
     ],
     media: [],
   },
@@ -189,7 +189,7 @@ const projectsData = [
   {
     id: "12",
     slug: "espolon",
-    hoverTitle: "ESPOlÒN TEQUILA",
+    hoverTitle: "ESPOLÒN TEQUILA",
     fullTitle: "Espolòn Tequila Halloween Activation",
     year: "2026",
     category: "Brand activation / Digital experience",
@@ -283,7 +283,7 @@ const projectsData = [
     hoverTitle: "BOILER ROOM X DJEZ X JYOTY",
     fullTitle: "Boiler Room at Burgess Park: DJEZ, JYOTY",
     year: "2023",
-    category: "Live visuals / Media System",
+    category: "Live visuals / Media systems",
     cover: getAsset("19-boiler-burgess.webp"),
     description: [
       "Project description coming soon.",
