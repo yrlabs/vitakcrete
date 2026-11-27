@@ -6,6 +6,22 @@ import Footer from "../components/Footer";
 import projectsData, { getAsset } from "../data/projectsData";
 import styles from "../css/ProjectDetail.module.css";
 
+const parseCategories = (categoryString) => {
+  if (!categoryString) return [];
+  return categoryString
+    .split("/")
+    .map((c) => c.trim())
+    .filter(Boolean);
+};
+
+const getCategoryCount = (targetCat) => {
+  return projectsData.filter((p) =>
+    parseCategories(p.category).some(
+      (cat) => cat.toLowerCase() === targetCat.toLowerCase()
+    )
+  ).length;
+};
+
 function ProjectDetail() {
   const { slug } = useParams();
   const project = projectsData.find((item) => item.slug === slug);
@@ -44,6 +60,8 @@ function ProjectDetail() {
       </div>
     );
   }
+
+  const categories = parseCategories(project.category);
 
   const isCoverVideo =
     typeof project.cover === "string" &&
@@ -121,6 +139,26 @@ function ProjectDetail() {
     );
   };
 
+  const renderCategoryStack = () => {
+    if (categories.length === 0) return null;
+    return (
+      <div className={styles.categoryStack}>
+        {categories.map((cat) => (
+          <Link
+            key={cat}
+            to={`/?category=${encodeURIComponent(cat)}`}
+            className={styles.categoryTag}
+          >
+            <span>{cat}</span>
+            <span className={styles.categoryCount}>
+              {getCategoryCount(cat)}
+            </span>
+          </Link>
+        ))}
+      </div>
+    );
+  };
+
   const hasBlocks = Array.isArray(project.blocks) && project.blocks.length > 0;
 
   return (
@@ -167,12 +205,15 @@ function ProjectDetail() {
 
           {hasBlocks ? (
             <div className={styles.modularLayout}>
-              {/* Project Header */}
+              {/* Project Header: Year + Stacked Categories, then Full Title */}
               <header className={styles.projectHeader}>
-                <p className={styles.meta}>
-                  {project.year}
-                  {project.category ? ` · ${project.category}` : ""}
-                </p>
+                <div className={styles.metaBar}>
+                  <p className={styles.metaYear}>
+                    <span className={styles.metaYearLabel}>YEAR</span>{" "}
+                    {project.year}
+                  </p>
+                  {renderCategoryStack()}
+                </div>
                 <h1 className={styles.title}>{project.fullTitle}</h1>
               </header>
 
@@ -255,10 +296,13 @@ function ProjectDetail() {
               }
             >
               <div className={styles.textColumn}>
-                <p className={styles.meta}>
-                  {project.year}
-                  {project.category ? ` · ${project.category}` : ""}
-                </p>
+                <div className={styles.metaBar}>
+                  <p className={styles.metaYear}>
+                    <span className={styles.metaYearLabel}>YEAR</span>{" "}
+                    {project.year}
+                  </p>
+                  {renderCategoryStack()}
+                </div>
                 <h1 className={styles.title}>{project.fullTitle}</h1>
                 <div className={styles.description}>
                   {project.description.map((paragraph, index) => (
