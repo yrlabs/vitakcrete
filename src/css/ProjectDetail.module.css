@@ -73,15 +73,18 @@
   z-index: 2;
 }
 
-/* White editorial sheet that slides up over the pinned hero */
+/* Rising frosted smoky-grey glass sheet */
 .whiteSheet {
   position: relative;
   z-index: 3;
-  background-color: #ffffff;
-  color: #222831;
+  background-color: rgba(24, 28, 34, 0.68);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.45);
   padding: clamp(44px, 6vw, 88px) clamp(20px, 5vw, 64px) clamp(64px, 8vw, 110px);
   min-height: 85vh;
 }
@@ -96,14 +99,14 @@
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 400;
-  color: #5c6470;
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   margin-bottom: 36px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .backLink:hover {
-  color: #222831;
+  color: #ffffff;
   transform: translateX(-3px);
 }
 
@@ -128,7 +131,7 @@
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 400;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.03em;
   margin-bottom: 12px;
 }
@@ -138,7 +141,7 @@
   font-weight: 600;
   font-size: clamp(1.9rem, 3.2vw, 2.75rem);
   line-height: 1.18;
-  color: #161a20;
+  color: #ffffff;
   margin-bottom: 24px;
 }
 
@@ -147,7 +150,7 @@
   font-weight: 400;
   font-size: 1.02rem;
   line-height: 1.75;
-  color: #333a45;
+  color: rgba(255, 255, 255, 0.88);
   display: flex;
   flex-direction: column;
   gap: 16px;
